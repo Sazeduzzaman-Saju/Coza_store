@@ -60,280 +60,6 @@
     <link rel="stylesheet" type="text/css" href="css/util.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!--===============================================================================================-->
-    <style>
-      .fixed-column {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-      }
-      .checkbox-wrapper-4 * {
-        box-sizing: border-box;
-      }
-      .checkbox-wrapper-4 .cbx {
-        -webkit-user-select: none;
-        user-select: none;
-        cursor: pointer;
-        padding: 0px 1px;
-        border-radius: 6px;
-        overflow: hidden;
-        transition: all 0.2s ease;
-        display: inline-block;
-      }
-      .checkbox-wrapper-4 .cbx:not(:last-child) {
-        margin-right: 6px;
-      }
-      .checkbox-wrapper-4 .cbx:hover {
-        background: rgba(0, 119, 255, 0.06);
-      }
-      .checkbox-wrapper-4 .cbx span {
-        float: left;
-        vertical-align: middle;
-        transform: translate3d(0, 0, 0);
-      }
-      .checkbox-wrapper-4 .cbx span:first-child {
-        position: relative;
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        transform: scale(1);
-        border: 1px solid #cccfdb;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
-      }
-      .checkbox-wrapper-4 .cbx span:first-child svg {
-        position: absolute;
-        top: 3px;
-        left: 2px;
-        fill: none;
-        stroke: #fff;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-dasharray: 16px;
-        stroke-dashoffset: 16px;
-        transition: all 0.3s ease;
-        transition-delay: 0.1s;
-        transform: translate3d(0, 0, 0);
-      }
-      .checkbox-wrapper-4 .cbx span:last-child {
-        padding-left: 8px;
-        line-height: 18px;
-      }
-      .checkbox-wrapper-4 .cbx:hover span:first-child {
-        border-color: #39bd1b;
-      }
-      .checkbox-wrapper-4 .inp-cbx {
-        position: absolute;
-        visibility: hidden;
-      }
-      .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
-        background: #39bd1b;
-        border-color: #39bd1b;
-        animation: wave-4 0.4s ease;
-      }
-      .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
-        stroke-dashoffset: 0;
-      }
-      .checkbox-wrapper-4 .inline-svg {
-        position: absolute;
-        width: 0;
-        height: 0;
-        pointer-events: none;
-        user-select: none;
-      }
-      @media screen and (max-width: 640px) {
-        .checkbox-wrapper-4 .cbx {
-          width: 100%;
-          display: inline-block;
-        }
-      }
-      @-moz-keyframes wave-4 {
-        50% {
-          transform: scale(0.9);
-        }
-      }
-      @-webkit-keyframes wave-4 {
-        50% {
-          transform: scale(0.9);
-        }
-      }
-      @-o-keyframes wave-4 {
-        50% {
-          transform: scale(0.9);
-        }
-      }
-      @keyframes wave-4 {
-        50% {
-          transform: scale(0.9);
-        }
-      }
-      .country-field {
-        border: 1px solid #eee;
-        padding: 5px;
-        font-size: 12px;
-        box-shadow: 2px 0px 10px #eee;
-      }
-      .options {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        z-index: 999;
-        margin: 0 0;
-        padding: 0 0;
-        list-style: none;
-        border: 1px solid #ccc;
-        background-color: white;
-        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-      }
-      .options li {
-        padding: 0 6px;
-        margin: 0 0;
-        padding: 0 10px;
-      }
-      .options li:hover {
-        background-color: #39f;
-        color: white;
-      }
-      .text-title {
-        color: #000000;
-        font-size: 24px;
-        word-spacing: 0px;
-        letter-spacing: normal;
-        font-weight: 700;
-      }
-      .form-control {
-        display: block;
-        width: 100%;
-        height: 3rem;
-        padding: 0.5rem 0.75rem;
-        border: 1px solid #aaaaaa29 !important;
-        font-size: 13px;
-        line-height: 1.25;
-        color: #495057;
-        background-color: #fff;
-        background-image: none;
-        background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        border-radius: 0rem;
-        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-      }
-      .form-control:focus {
-        color: #495057;
-        background-color: #fff;
-        border: 1px solid #39bd1b;
-        outline: 0;
-      }
-      .link_color {
-        color: #39bd1b !important;
-        border-bottom: 1px solid #39bd1b !important;
-      }
-      .country-field {
-        border: 1px solid #eee;
-        padding: 5px;
-        font-size: 12px;
-        box-shadow: 2px 0px 10px #eee;
-        height: 65px;
-      }
-      .country_select {
-        border: 0px;
-        position: relative;
-        top: -8px;
-      }
-      .phone_number {
-        position: relative;
-        color: #aaa;
-        font-size: 16px;
-      }
-
-      .phone_number {
-        display: inline-block;
-      }
-
-      .phone_number input {
-        width: 250px;
-        height: 32px;
-
-        background: #fcfcfc;
-        border: 1px solid #aaa;
-        border-radius: 5px;
-        box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-      }
-
-      .phone_number input {
-        text-indent: 32px;
-      }
-      .phone_number .fa-search {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-      }
-
-      .phone_number .fa-search {
-        left: auto;
-        right: 10px;
-      }
-      .text-dark-black {
-        color: #000000;
-      }
-      .form-check.selected-radio {
-        border: 1px solid #39bd1b !important;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
-      }
-      .check-area {
-        border-radius: 5px;
-      }
-      .active-option {
-        border: 1px solid green !important;
-      }
-      .section-checkbox {
-        cursor: pointer;
-      }
-      .custom-card-header:hover {
-        cursor: pointer;
-      }
-      p {
-        color: #000000;
-      }
-      .checkout-sidebar-info-main {
-        height: 100vh;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 30px;
-        top: 5rem;
-      }
-      .checkout-sidebar-info-main-2 {
-        height: 100vh;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-color: #fafafa;
-        z-index: 1000;
-        padding: 15px;
-        top: 5rem;
-      }
-      .count-label {
-        padding: 5px;
-        position: relative;
-        width: 20px;
-        left: 3.3rem;
-        top: 0.6rem;
-        height: 20px;
-      }
-      .apply-btn {
-        padding: 12px;
-      }
-      .main-border{
-        border: 1px solid #dadada;
-    border-bottom: 0px;
-      }
-    </style>
   </head>
   <body class="animsition">
     <!-- Header -->
@@ -722,7 +448,7 @@
                   />
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-12 col-12 pr-0">
+              <div class="col-lg-6 col-sm-12 col-12 pr-0 check-field">
                 <div class="form-group mb-0">
                   <input
                     type="text"
@@ -755,7 +481,7 @@
                   />
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-12 col-12 pr-0 mt-3">
+              <div class="col-lg-6 col-sm-12 col-12 pr-0 mt-3 check-field">
                 <div class="form-group mb-0">
                   <input
                     type="text"
@@ -1009,7 +735,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="card mt-0" style="background-color: #dadada; border-top: 0px;">
+                <div
+                  class="card mt-0"
+                  style="background-color: #dadada; border-top: 0px"
+                >
                   <div class="card-header border-0 custom-card-header bg-white">
                     <h5 class="mb-0">
                       <label
@@ -1178,7 +907,9 @@
                             />
                           </div>
                         </div>
-                        <div class="col-lg-6 col-sm-12 col-12 pr-0 mt-3">
+                        <div
+                          class="col-lg-6 col-sm-12 col-12 pr-0 mt-3 check-field"
+                        >
                           <div class="form-group mb-0">
                             <input
                               type="text"
@@ -1221,60 +952,64 @@
           </form>
         </div>
         <div class="col-lg-6">
-          <div class="checkout-sidebar-info-main" style="border-left: 1px solid #dadada;">
+          <div class="checkout-sidebar-info-main">
             <div class="row align-items-center">
-              <div class="col-lg-2">
-                <div>
-                  <span class="badge badge-dark rounded-circle count-label"
-                    >1</span
-                  >
-                  <img
-                    class="rounded border border-black border-secondary"
-                    src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801"
-                    alt=""
-                  />
+              <div class="col-lg-12 mb-2">
+                <div
+                  class="d-flex justify-content-between p-2"
+                  style="background-color: #f7f7f7"
+                >
+                  <a href="">
+                    <div class="header-cart-item-img">
+                      <span class="badge badge-dark rounded-circle count-label"
+                        >1</span
+                      >
+                      <img
+                        class="img-fluid rounded"
+                        src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801"
+                        alt="IMG"
+                      />
+                    </div>
+                  </a>
+                  <div>
+                    <p class="p-0 m-0 pt-2">Round Neck Emerald Half Sleeve</p>
+                    <p class="p-0 m-0">2XS</p>
+                  </div>
+                  <div>
+                    <p class="p-0 m-0 mt-4 text-info">৳299.00</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-8">
-                <div>
-                  <p class="p-0 m-0 mt-4">Round Neck Emerald Half Sleeve</p>
-                  <p class="p-0 m-0">2XS</p>
-                </div>
-              </div>
-              <div class="col-lg-2">
-                <div>
-                  <p class="p-0 m-0 mt-4">৳299.00</p>
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center">
-              <div class="col-lg-2">
-                <div>
-                  <span class="badge badge-dark rounded-circle count-label"
-                    >1</span
-                  >
-                  <img
-                    class="rounded-2 border border-black border-secondary"
-                    src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div>
-                  <p class="p-0 m-0 mt-4">Round Neck Emerald Half Sleeve</p>
-                  <p class="p-0 m-0">2XS</p>
-                </div>
-              </div>
-              <div class="col-lg-2">
-                <div>
-                  <p class="p-0 m-0 mt-4">৳299.00</p>
+              <div class="col-lg-12 mb-2">
+                <div
+                  class="d-flex justify-content-between p-2"
+                  style="background-color: #f7f7f7"
+                >
+                  <a href="">
+                    <div class="header-cart-item-img">
+                      <span class="badge badge-dark rounded-circle count-label"
+                        >1</span
+                      >
+                      <img
+                        class="img-fluid rounded"
+                        src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801"
+                        alt="IMG"
+                      />
+                    </div>
+                  </a>
+                  <div>
+                    <p class="p-0 m-0 pt-2">Round Neck Emerald Half Sleeve</p>
+                    <p class="p-0 m-0">2XS</p>
+                  </div>
+                  <div>
+                    <p class="p-0 m-0 mt-4 text-info">৳299.00</p>
+                  </div>
                 </div>
               </div>
             </div>
             <form action="">
               <div class="row g-0 mt-5">
-                <div class="col-lg-9 pr-1">
+                <div class="col-lg-9 pr-1 check-field">
                   <input
                     type="text"
                     class="form-control"
@@ -1284,7 +1019,7 @@
                     required
                   />
                 </div>
-                <div class="col-lg-3 pl-1">
+                <div class="col-lg-3 pl-1 check-field-right">
                   <button class="btn btn-secondary w-100 apply-btn">
                     <span>Apply</span>
                   </button>
@@ -1292,38 +1027,34 @@
               </div>
             </form>
             <div class="row mt-5">
-              <div class="col-lg-6">
-                <p class="text-left pb-2">Subtotal</p>
-              </div>
-              <div class="col-lg-6">
-                <p class="text-right">৳299.00</p>
-              </div>
-              <div class="col-lg-6">
-                <p class="text-left pb-2">Shipping</p>
-              </div>
-              <div class="col-lg-6">
-                <p class="text-right">৳70.00</p>
-              </div>
-              <div class="col-lg-6">
-                <p class="text-left pb-2">Estimated taxes</p>
-              </div>
-              <div class="col-lg-6">
-                <p class="text-right">৳22.43</p>
-              </div>
-              <div class="col-lg-6">
-                <hr>
-                <h6
-                  class="text-left pb-2 bold text-black"
-                  style="color: #000000; font-weight: bold"
-                >
-                  Total(Including 7.5% VAT)
-                </h6>
-              </div>
-              <div class="col-lg-6">
-                <h6 class="text-right">
-                  BDT
-                  <span style="color: #000000; font-weight: bold">৳391.43</span>
-                </h6>
+              <div class="col-lg-12 col-sm-12">
+                <div class="d-flex justify-content-between">
+                  <p class="text-left pb-2">Subtotal</p>
+                  <p class="text-right">৳299.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="text-left pb-2">Shipping</p>
+                  <p class="text-right">৳70.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="text-left pb-2">Estimated taxes</p>
+                  <p class="text-right">৳22.43</p>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between pt-4">
+                  <h6
+                    class="text-left pb-2 bold text-black"
+                    style="color: #000000; font-weight: bold"
+                  >
+                    Total(Including 7.5% VAT)
+                  </h6>
+                  <h6 class="text-right">
+                    BDT
+                    <span style="color: #000000; font-weight: bold"
+                      >৳391.43</span
+                    >
+                  </h6>
+                </div>
               </div>
             </div>
           </div>
