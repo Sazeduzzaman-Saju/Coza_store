@@ -252,7 +252,7 @@
             <h5 class="text-title my-4">Thank you, Minerva!</h5>
           </div>
           <div class="card">
-            <div class="card-body">
+            <div class="card-body shadow-sm">
               <h5 class="pb-3">Your order is confirmed</h5>
               <p>Collect your reference number -</p>
               <p> On the next page, you’ll get an order number that you will have to use as a reference number. </p>
@@ -323,37 +323,23 @@
           </div>
           <div class="card mt-3 mb-3">
             <div class="card-body">
-              <p class="text-title">Transection Info</p>
+              <div class="d-flex justify-content-between align-items-center pb-3">
+                <p class="text-title">Transection Info</p>
+              <p> Need help? <a href="#"> Contact us</a>
+              </p>
+              </div>
               <form action="">
-                <div class="row g-0 mt-5">
-                  <div class="col-lg-9 pr-1 check-field-form">
-                    <input
-                      type="text"
-                      class="form-control"
-                      style="border-radius: 5px"
-                      id="validationCustom01"
-                      placeholder="Enter The Transection Id required"
-                      required
-                    />
+                <div class="row">
+                  <div class="col-lg-7">
+                    <input class="stext-104 w-100 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
                   </div>
-                  <div class="col-lg-3 pl-1 check-field-right">
-                    <button class="btn btn-secondary w-100 apply-btn">
-                      <span>Process Order</span>
-                    </button>
+                  <div class="col-lg-5">
+                    <a class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
+                      Apply
+                    </a>
                   </div>
                 </div>
               </form>
-              <div class="row mt-5">
-                <div class="col-lg-12">
-                  <div class="d-flex justify-content-between">
-                    <p> Need help? <a href="#"> Contact us</a>
-                    </p>
-                    <div>
-                      <button class="btn text-white p-3 w-100" type="submit" style="background-color: #39bd1b"> Complete Order </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -361,14 +347,14 @@
           <div class="checkout-sidebar-info-main-2">
             <div class="row align-items-center">
               <div class="col-lg-12 mb-2">
-                <div class="d-flex justify-content-between p-2" style="background-color: #f7f7f7">
+                <div class="d-flex justify-content-between p-2" style="background-color: #f7f7f7; border-radius: 5px;">
                   <a href="">
                     <div class="header-cart-item-img">
                       <span class="badge badge-dark rounded-circle count-label">1</span>
                       <img class="img-fluid rounded" src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801" alt="IMG" />
                     </div>
                   </a>
-                  <div>
+                  <div class="w-75">
                     <p class="p-0 m-0 pt-2">Round Neck Emerald Half Sleeve</p>
                     <p class="p-0 m-0">2XS</p>
                   </div>
@@ -378,14 +364,14 @@
                 </div>
               </div>
               <div class="col-lg-12 mb-2">
-                <div class="d-flex justify-content-between p-2" style="background-color: #f7f7f7">
+                <div class="d-flex justify-content-between p-2" style="background-color: #f7f7f7; border-radius: 5px;">
                   <a href="">
                     <div class="header-cart-item-img">
                       <span class="badge badge-dark rounded-circle count-label">1</span>
                       <img class="img-fluid rounded" src="https://cdn.shopify.com/s/files/1/0103/5704/7332/files/7_2_64x64.png?v=1698831801" alt="IMG" />
                     </div>
                   </a>
-                  <div>
+                  <div class="w-75">
                     <p class="p-0 m-0 pt-2">Round Neck Emerald Half Sleeve</p>
                     <p class="p-0 m-0">2XS</p>
                   </div>
@@ -440,7 +426,7 @@
                             <p class="pt-2">Tk 489.30</p>
                           </div>
                           <div class="d-flex align-items-center justify-content-end">
-                            <button class="btn rounded-pill text-white btn-sm" style="background-color: #39bd1b"> Add Cart </button>
+                            <button class="flex-c-m stext-101 cl5 size-70 bg2 bor1 hov-btn1 p-lr-15 trans-04"> Add</button>
                           </div>
                         </div>
                       </div>
@@ -464,7 +450,7 @@
                               <p class="pt-2">Tk 489.30</p>
                             </div>
                             <div class="d-flex align-items-center justify-content-end">
-                              <button class="btn rounded-pill text-white btn-sm" style="background-color: #39bd1b"> Add Cart </button>
+                              <button class="flex-c-m stext-101 cl5 size-70 bg2 bor1 hov-btn1 p-lr-15 trans-04"> Add</button>
                             </div>
                           </div>
                         </div>
@@ -488,7 +474,7 @@
                             <p class="pt-2">Tk 489.30</p>
                           </div>
                           <div class="d-flex align-items-center justify-content-end">
-                            <button class="btn rounded-pill text-white btn-sm" style="background-color: #39bd1b"> Add Cart </button>
+                            <button class="flex-c-m stext-101 cl5 size-70 bg2 bor1 hov-btn1 p-lr-15 trans-04"> Add</button>
                           </div>
                         </div>
                       </div>
@@ -503,7 +489,9 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-end">
-                      <button class="btn text-white p-3" type="submit" style="background-color: #39bd1b"> Add To Your Cart </button>
+                      <a class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
+                        PROCESS ORDER
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -648,71 +636,5 @@
       </script>
       <!--===============================================================================================-->
       <script src="js/main.js"></script>
-      <script>
-        (function() {
-          "use strict";
-          window.addEventListener("load", function() {
-            var form = document.getElementById("needs-validation");
-            form.addEventListener("submit", function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add("was-validated");
-            }, false);
-          }, false);
-        })();
-      </script>
-      <script>
-        $(document).ready(function() {
-          // Add a change event listener to the radio buttons
-          $('input[type="radio"]').change(function() {
-            // Remove the 'selected-radio' class from all form-checks
-            $(".form-check").removeClass("selected-radio");
-            // Add the 'selected-radio' class to the form-check of the selected radio button
-            $(this).closest(".form-check").addClass("selected-radio");
-          });
-        });
-      </script>
-      <script>
-        $(document).ready(function() {
-          // Add a change event listener to the radio buttons
-          $(".section-radio").change(function() {
-            // Collapse all sections
-            $(".card .collapse").collapse("hide");
-            // Remove the 'active-option' class from all cards
-            $(".card").removeClass("active-option");
-            // Expand the selected section
-            var targetCollapse = $(this).data("target");
-            $(targetCollapse).collapse("show");
-            // Add the 'active-option' class to the card of the selected radio button
-            $(this).closest(".card").addClass("active-option");
-          });
-        });
-      </script>
-      <script>
-        $(document).ready(function() {
-          // Add a change event listener to the radio buttons in the Billing Address section
-          $(".section-radio-2").change(function() {
-            // If "Same as shipping address" is selected, unselect "Use a different billing address"
-            if ($(this).prop("checked") && $(this).attr("name") === "same_shipping_address") {
-              $("input[name='difrent_address']").prop("checked", false);
-            }
-            // If "Use a different billing address" is selected, unselect "Same as shipping address"
-            if ($(this).prop("checked") && $(this).attr("name") === "difrent_address") {
-              $("input[name='same_shipping_address']").prop("checked", false);
-            }
-            // Collapse all sections
-            $(".card .collapse").collapse("hide");
-            // Remove the 'active-option' class from all cards
-            $(".card").removeClass("active-option");
-            // Expand the selected section
-            var targetCollapse = $(this).data("target");
-            $(targetCollapse).collapse("show");
-            // Add the 'active-option' class to the card of the selected radio button
-            $(this).closest(".card").addClass("active-option");
-          });
-        });
-      </script>
   </body>
 </html>
